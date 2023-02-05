@@ -1,0 +1,121 @@
+.rightSideContainer{
+    width: 1178px;
+    height: fit-content;
+    left: 262px;
+    top: 102px;
+    display: flex;
+    flex-direction: column;
+}
+.productWithCategory{
+    width: 100%;
+    height: 280px;
+    /* background-color: cadetblue; */
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.categoryName{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    
+
+}
+.catName{
+    margin-left: 20px;
+    font-family: 'Mortise';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 140%;
+    color: #100E3A;
+
+}
+.products{
+    margin-left: 20px;
+    width: 100%;
+    height: 200px;
+    /* background-color: chocolate; */
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+.product{
+    width: 140px;
+    height: 180px;
+    /* background-color: crimson; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    /* border: 1px solid black; */
+}
+.productImg{
+    width: 118px;
+    height: 95px;
+    background-color: cornsilk;
+}
+.productImage{
+    height: 100%;
+    width: 100%;
+}
+.productPrice{
+    width: 120px;
+height: 28px;
+
+/* Muli/Semibold/Web/20pt */
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 140%;
+/* identical to box height, or 28px */
+
+
+/* Neutral/Dark Blue */
+
+color: #100E3A;
+}
+
+.productName{
+    width: 117px;
+height: 22px;
+
+/* Muli/Semibold/16pt */
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+
+/* Neutral/Dark Blue */
+
+color: #100E3A;
+
+}
+.productWeight{
+    width: 120px;
+height: 22px;
+
+/* Muli/Bold/16pt */
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 140%;
+/* or 22px */
+
+
+/* Neutral/Light Gray */
+
+color: #B6BAC3;
+
+
+}
