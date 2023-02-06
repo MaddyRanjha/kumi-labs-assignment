@@ -7,6 +7,9 @@ function Produce() {
     const dispatch =useDispatch()
     const item = useSelector(state => state.item)
     console.log(item[0].productImg)
+    function cliked(){
+        console.log("Button Clicked")
+    }
 
   return (
     <div className='rightSideContainer'>
@@ -25,7 +28,8 @@ function Produce() {
                                     
                                     <img src={ele.productImg} className='productImage'/>
                                     
-                                    <button className='addButton' onClick={()=> dispatch({type:'UPDATE_CART_COUNT'})}>+</button>                             
+                                    <span onClick={cliked} className='addButton'><p>+</p></span>
+                                                                
                                 </div>
                                 <div className='productPrice'>
                                     ${ele.price}

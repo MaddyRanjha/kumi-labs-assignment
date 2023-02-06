@@ -57,23 +57,26 @@
     height: 95px;
     display: flex;
 }
+
 .productImage{
     height: 100%;
     width: 100%;
 }
 .addButton{
-    background-color: green;
-    border-radius: 50%;
-    color: #f0f8ff;
-    font-size: 1.2rem;
-    height: 2rem;
-    width: 2rem;
-    padding: 5px;
-    margin-left: 8rem;
-    margin-top: 6rem;
-    /* position: absolute; */
     
+    font-size: larger;
+    font-weight: bolder;
+    margin: 100px 0px 0px -22px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #40D589;
 }
+span p{
+    color: white;
+    margin:-3px -7px 0px -7px;
+}
+
 .productPrice{
     width: 120px;
 height: 28px;

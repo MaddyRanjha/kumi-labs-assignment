@@ -67,7 +67,7 @@ const initialState = {
 
 function reducer(state = initialState, action){
     switch(action.type){
-        case UPDATE_CART_COUNT:
+        case "UPDATE_CART_COUNT":
             return{
                 ...state,
                 counter: state.counter+1
