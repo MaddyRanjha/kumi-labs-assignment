@@ -1,9 +1,10 @@
 import React from 'react'
 import './produce.css'
-import {useSelector} from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux'
 
 function Produce() {
     const categoryArray = useSelector(state => state.categoryArray)
+    const dispatch =useDispatch()
     const item = useSelector(state => state.item)
     console.log(item[0].productImg)
 
@@ -21,9 +22,10 @@ function Produce() {
                         {item.map((ele)=>(
                             <li key={ele} className='product'>
                                 <div className='productImg'>
-                                    {/* {ele.productImg} */}
+                                    
                                     <img src={ele.productImg} className='productImage'/>
                                     
+                                    <button className='addButton' onClick={()=> dispatch({type:'UPDATE_CART_COUNT'})}>+</button>                             
                                 </div>
                                 <div className='productPrice'>
                                     ${ele.price}

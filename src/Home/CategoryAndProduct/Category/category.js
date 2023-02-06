@@ -15,13 +15,16 @@ function Category() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  // function activeClass(){
+  //   classList.add("active")
+  // }
   // console.log(categoryArray)
   return (
     <div className='categoryContainer'>
         <div className="wrapper">
         <ul className='categoryList'>
       {categoryArray.map(data => (
-        <li key={data} onClick={()=>handleClickScroll(data)}><span>{data}</span></li>
+        <li key={data} onClick={()=>handleClickScroll(data)} className='listItem'><span>{data}</span></li>
       ))}
     </ul>
     </div>
