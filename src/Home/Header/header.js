@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function Header() {
   const counter = useSelector((state) => state.counter);
-  console.log(counter, "{}{}")
   return (
     <div className="headerNavbar">
       <div className="leftSide">
