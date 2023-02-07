@@ -4,11 +4,14 @@ import {useSelector} from 'react-redux'
 
 function Category() {
   
+  
   const categoryArray = useSelector(state => state.categoryArray);
 
   const handleClickScroll = (data,i) => {
-    console.log(data);
-    const element = document.getElementsByClassName(data)[0];
+    // console.log(i);
+    const element = document.getElementById(data);
+    console.log(element)
+    
     const lis = document.getElementsByTagName('li')
     console.log(lis)
     for(let i=0; i<lis.length; i++){
@@ -18,7 +21,8 @@ function Category() {
     element.classList.add("activated")
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
+      window.scrollTo({top:i*(280),behavior: 'smooth'});
+      
     }
   };
   // function activeClass(){
@@ -30,7 +34,7 @@ function Category() {
         <div className="wrapper">
         <ul className='categoryList'>
       {categoryArray.map((data,i) => (
-        <li key={i} onClick={()=>handleClickScroll(data,i)} className={`${data} listItem`}><span className='item'>{data}</span></li>
+        <li key={i} onClick={()=>handleClickScroll(data,i)} className={`${data} listItem`} id={data}><span className='item'>{data}</span></li>
       ))}
     </ul>
     </div>

@@ -1,1 +1,2 @@
-export const UPDATE_CART_COUNT = 'UPDATE_CART_COUNT';
+export const ADD = 'ADD';
+export const REMOVE = 'REMOVE';

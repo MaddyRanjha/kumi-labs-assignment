@@ -2,13 +2,15 @@
 
 .categoryContainer{
     width: 220px;
-    /* display: flex; */
-    /* justify-content: center; */
+    position: sticky;
+    left: 0;
+    
   
 }
 .wrapper{
- position: sticky;
-    top:0px;
+ position: fixed;
+ top: 65px;
+    /* top:0px; */
     
 }
 .categoryList{

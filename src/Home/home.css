@@ -4,6 +4,9 @@
     background: #FFFFFF;
     border-radius: 20px;
     display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
     flex-direction: column;
     overflow-x: hidden;
 }
