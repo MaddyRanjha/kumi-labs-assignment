@@ -7,8 +7,17 @@ function Produce() {
   // const [check, setCheck]= useState(true);
   const categoryArray = useSelector((state) => state.categoryArray);
   const dispatch = useDispatch();
-  const item = useSelector((state) => state.item);
-  console.log(item[0].productImg);
+  
+
+    let item = useSelector((state) => state.item);
+const [productCart,setProductCart]=useState([]);
+function checkCart(prod){
+  if(productCart.includes(prod))
+  return true;
+
+  return false;
+}
+
   // function cliked() {
   //   setCheck(!true)
   // }
@@ -26,19 +35,21 @@ function Produce() {
                 <li key={ele} className="product">
                   <div className="productImg">
                     <img src={ele.productImg} className="productImage" />
+                    {!checkCart(ele.name)?<div>
+                {console.log(ele?.addToCart,"ndjndj")}
 
-                    <span
+                      <span
                       className="addButton"
-                      onClick={() => dispatch({ type: 'ADD'})}
+                      onClick={() => {setProductCart([...productCart,ele.name]); dispatch({ type: 'ADD'})}}
                     >
                       <span className="plusButton">+</span>
-                    </span>
+                    </span></div>:
                     <span
-                      className="subButton"
-                      onClick={() => dispatch({ type: 'REMOVE'})}
+                      className="addButton"
+                      onClick={() =>{let prodd=productCart?.filter(function(item){return item!=ele.name}); setProductCart(prodd); dispatch({ type: 'REMOVE'})}}
                     >
-                      <span className="minButton">-</span>
-                    </span>
+                      <span className="plusButton">-</span>
+                    </span>}
                   </div>
                   <div className="productPrice">${ele.price}</div>
                   <div className="productName">{ele.name}</div>

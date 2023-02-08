@@ -52,17 +52,21 @@ function reducer(state = initialState, action){
 
     switch(action.type){
         case "ADD":
+           
             return{
                 ...state,
                 counter: state.counter+1,
                 addToCart: !state.addToCart,
                     
             }
+
         case "REMOVE":
+            
             return{
                 ...state,
                 counter: state.counter-1,
                 addToCart: !state.addToCart
+                
             }
             
         default:
